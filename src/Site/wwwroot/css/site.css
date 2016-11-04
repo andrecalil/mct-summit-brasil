@@ -1,0 +1,20 @@
+﻿.session {
+    padding: 0 2px 2px 2px;
+}
+.session .session-content {
+    background-color: #a3bad2;
+}
+.lobby{
+    background-color: #436280;
+}
+.session.blank{
+    background: none;
+}
+.time-slot, .date-slot {
+    text-align: right;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+}
+.date-slot {
+    text-align: center;
+}

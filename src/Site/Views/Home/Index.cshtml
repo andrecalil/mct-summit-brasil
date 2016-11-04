@@ -1,0 +1,184 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<section id="evento" class="download bg-primary text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h2 class="section-heading">Presencial ou remoto? Ambos!</h2>
+                <p>Este Summit será um pouco diferente. Todas as sessões serão online, via GoToMeeting.</p>
+                <div class="row">
+                    <div class="col-md-6 text-center"><i class="fa fa-5x fa-group"></i><p>Hospede um grupo na sua cidade e crie seu evento local. O coffee break será patrocinado.</p></div>
+                    <div class="col-md-6 text-center"><i class="fa fa-5x fa-television"></i><p>Acompanhe todo o evento pela internet e interaja com seus colegas no Saguão, sala permanente de tema livre!</p></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="agenda" class="features">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <div class="section-heading">
+                    <h2>Agenda</h2>
+                    <p class="text-muted">Trilhas técnicas e softskills, mais o saguão para conversar com MCTs de todo o Brasil.</p>
+                    <hr>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-2"></div>
+                        <div class="col-md-2"></div>
+                        <div class="col-md-4 date-slot">Sábado 03</div>
+                        <div class="col-md-4 date-slot">Domingo 04</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2 time-slot">9:00 - 10:15</div>
+                        <div class="col-md-2"></div>
+                        <div class="col-md-4 session"><div class="session-content">&nbsp;</div></div>
+                        <div class="col-md-4 session"><div class="session-content">&nbsp;</div></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2 time-slot">10:30 - 11:45</div>
+                        <div class="col-md-2"></div>
+                        <div class="col-md-4 session"><div class="session-content">&nbsp;</div></div>
+                        <div class="col-md-4 session"><div class="session-content">&nbsp;</div></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2 time-slot">13:00 - 14:15</div>
+                        <div class="col-md-2 lobby"><div class="session-content">&nbsp;</div></div>
+                        <div class="col-md-2 session"><div class="session-content">&nbsp;</div></div>
+                        <div class="col-md-2 session"><div class="session-content">&nbsp;</div></div>
+                        <div class="col-md-4 session blank">&nbsp;</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2 time-slot">14:30 - 15:45</div>
+                        <div class="col-md-2 lobby"><div class="session-content">&nbsp;</div></div>
+                        <div class="col-md-2 session"><div class="session-content">&nbsp;</div></div>
+                        <div class="col-md-2 session"><div class="session-content">&nbsp;</div></div>
+                        <div class="col-md-4 session blank">&nbsp;</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2 time-slot">16:00 - 17:15</div>
+                        <div class="col-md-2 lobby"><div class="session-content">&nbsp;</div></div>
+                        <div class="col-md-2 session"><div class="session-content">&nbsp;</div></div>
+                        <div class="col-md-2 session"><div class="session-content">&nbsp;</div></div>
+                        <div class="col-md-4 session blank">&nbsp;</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <div class="section-heading">
+                    <h2>Call for Speakers</h2>
+                    <p class="text-muted">Faça parte deste grande evento!</p>
+                    <hr>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <form class="form-horizontal">
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="autor">Seu nome</label>
+                            <div class="col-md-4">
+                                <input id="autor" name="autor" type="text" placeholder="Nome" class="form-control input-md" required="">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="email">Seu e-mail</label>
+                            <div class="col-md-4">
+                                <input id="email" name="email" type="text" placeholder="E-mail" class="form-control input-md" required="">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="titulo">Título da sessão</label>
+                            <div class="col-md-4">
+                                <input id="titulo" name="titulo" type="text" placeholder="Título" class="form-control input-md" required="">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="descricao">Breve descrição</label>
+                            <div class="col-md-4">
+                                <textarea class="form-control" id="descricao" name="descricao"></textarea>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="trilha">Trilha</label>
+                            <div class="col-md-4">
+                                <select id="trilha" name="trilha" class="form-control">
+                                    <option value="P">Infra - On Premise</option>
+                                    <option value="C">Infra - Cloud</option>
+                                    <option value="D">Dev</option>
+                                    <option value="S">Softskills</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="enviar"></label>
+                            <div class="col-md-4">
+                                <button id="enviar" name="enviar" class="btn btn-primary">Submeter</button>
+                            </div>
+                        </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="hospede" class="cta">
+    <div class="cta-content">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4"><h2>Reuna os MCTs da sua região!</h2></div>
+                <div class="col-md-8">
+                    <p>Se você tem interesse em organizar um grupo para acompanhar o Summit, preencha o formulário abaixo que entraremos em contato!</p>
+                    <form class="form-horizontal">
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="autor">Seu nome</label>
+                            <div class="col-md-4">
+                                <input id="autor" name="autor" type="text" placeholder="Nome" class="form-control input-md" required="">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="email">Seu e-mail</label>
+                            <div class="col-md-4">
+                                <input id="email" name="email" type="text" placeholder="E-mail" class="form-control input-md" required="">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="cidade">Cidade/UF</label>
+                            <div class="col-md-4">
+                                <input id="cidade" name="cidade" type="text" placeholder="Cidade" class="form-control input-md" required="">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="enviar"></label>
+                            <div class="col-md-4">
+                                <button id="enviar" name="enviar" class="btn btn-primary">Submeter</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="overlay"></div>
+</section>
+<section id="inscricao" class="contact bg-primary">
+    <div class="container">
+        <h2><a href="#">Inscreva-se</a> e participe!</h2>
+        <ul class="list-inline list-social">
+            <li class="social-twitter">
+                <a href="https://twitter.com/hashtag/MCTSummitBR2016?src=hash"><i class="fa fa-twitter"></i></a>
+            </li>
+            <li class="social-facebook">
+                <a href="#"><i class="fa fa-facebook"></i></a>
+            </li>
+        </ul>
+    </div>
+</section>
