@@ -13,8 +13,10 @@ namespace Site
             var builder = new ConfigurationBuilder()
                 .SetBasePath(env.ContentRootPath)
                 .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
-                .AddJsonFile("appsettings.dev.json", optional: true)
                 .AddEnvironmentVariables();
+
+            if (env.IsDevelopment())
+                builder.AddJsonFile("appsettings.dev.json", optional: true);
 
             Configuration = builder.Build();
         }
