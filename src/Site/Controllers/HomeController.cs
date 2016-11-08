@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Options;
 using RestSharp;
 using RestSharp.Authenticators;
@@ -9,11 +11,11 @@ namespace Site.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly IOptions<SendMailOptions> Options;
+        private readonly IConfigurationRoot _Config;
 
-        public HomeController(IOptions<SendMailOptions> options)
+        public HomeController(IConfigurationRoot config)
         {
-            Options = options;
+            _Config = config;
         }
 
         public IActionResult Index() => View();
@@ -80,10 +82,10 @@ namespace Site.Controllers
 
         private void SendEmail(string subject, string body)
         {
-            var mailgunBaseURL = Options.Value.MailgunBaseURL;
-            var mailgunResourceURL = Options.Value.MailgunResourceURL;
-            var mailgunAPIKey = Options.Value.MailgunAPIKey;
-            var to = Options.Value.EmailTo;
+            var mailgunBaseURL = _Config["SendMailOptions:MailgunBaseURL"];
+            var mailgunResourceURL = _Config["SendMailOptions:MailgunResourceURL"];
+            var mailgunAPIKey = _Config["SendMailOptions:MailgunAPIKey"];
+            var to = _Config["SendMailOptions:EmailTo"];
 
             RestClient client = new RestClient();
             client.BaseUrl = new Uri(mailgunBaseURL);
