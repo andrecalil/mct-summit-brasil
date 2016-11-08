@@ -185,6 +185,10 @@ header .device-container {
   max-width: 300px;
   margin: 0 auto 100px;
 }
+header.not-home {
+    min-height: 15%;
+    margin-bottom: 20px;
+}
 header .device-container .screen img {
   border-radius: 3px;
 }
@@ -315,9 +319,12 @@ section.cta .cta-content h2 {
   margin-top: 0;
   /*margin-bottom: 25px;*/
   color: white;
-  max-width: 450px;
-  font-size: 50px;
+  /*max-width: 450px;*/
+  /*font-size: 50px;*/
 }
+    section.cta .cta-content a {
+        margin: 10px 0 40px 0;
+    }
 @media (min-width: 768px) {
   section.cta .cta-content h2 {
     font-size: 80px;
@@ -418,6 +425,19 @@ footer ul li a.active {
   color: white;
   background-color: #fdcc52;
   border-color: #fdcc52;
+}
+.btn-outline-white {
+  color: #118A2F;
+  border-color: #118A2F;
+  border: 1px solid;
+}
+.btn-outline-white:hover,
+.btn-outline-white:focus,
+.btn-outline-white:active,
+.btn-outline-white.active {
+  color: white;
+  background-color: #118A2F;
+  border-color: #118A2F;
 }
 .btn {
   font-family: 'Lato', 'Helvetica', 'Arial', 'sans-serif';

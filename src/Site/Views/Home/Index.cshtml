@@ -1,7 +1,25 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-}
-
+﻿<header>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-7">
+                <div class="header-content">
+                    <div class="header-content-inner">
+                        <h1>MCT Summit Brasil 2016</h1>
+                        <h2>03 e 04 de Dezembro</h2>
+                        <a href="#evento" class="btn btn-outline btn-xl page-scroll">Participe!</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-5">
+                <div class="header-content">
+                    <div class="header-content-inner">
+                        <img src="images/logo-summit.png" class="img-responsive" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
 <section id="evento" class="download bg-primary text-center">
     <div class="container">
         <div class="row">
@@ -76,56 +94,8 @@
             <div class="col-lg-12 text-center">
                 <div class="section-heading">
                     <h2>Call for Speakers</h2>
-                    <p class="text-muted">Faça parte deste grande evento!</p>
-                    <hr>
+                    <a href="/session" class="btn btn-outline-white btn-xl">Ajude-nos a fazer o Summit ainda melhor!</a>
                 </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12">
-                <form class="form-horizontal">
-                        <div class="form-group">
-                            <label class="col-md-4 control-label" for="autor">Seu nome</label>
-                            <div class="col-md-4">
-                                <input id="autor" name="autor" type="text" placeholder="Nome" class="form-control input-md" required="">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="col-md-4 control-label" for="email">Seu e-mail</label>
-                            <div class="col-md-4">
-                                <input id="email" name="email" type="text" placeholder="E-mail" class="form-control input-md" required="">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="col-md-4 control-label" for="titulo">Título da sessão</label>
-                            <div class="col-md-4">
-                                <input id="titulo" name="titulo" type="text" placeholder="Título" class="form-control input-md" required="">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="col-md-4 control-label" for="descricao">Breve descrição</label>
-                            <div class="col-md-4">
-                                <textarea class="form-control" id="descricao" name="descricao"></textarea>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="col-md-4 control-label" for="trilha">Trilha</label>
-                            <div class="col-md-4">
-                                <select id="trilha" name="trilha" class="form-control">
-                                    <option value="P">Infra - On Premise</option>
-                                    <option value="C">Infra - Cloud</option>
-                                    <option value="D">Dev</option>
-                                    <option value="S">Softskills</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="col-md-4 control-label" for="enviar"></label>
-                            <div class="col-md-4">
-                                <button id="enviar" name="enviar" class="btn btn-primary">Submeter</button>
-                            </div>
-                        </div>
-                </form>
             </div>
         </div>
     </div>
@@ -134,35 +104,9 @@
     <div class="cta-content">
         <div class="container">
             <div class="row">
-                <div class="col-md-4"><h2>Reuna os MCTs da sua região!</h2></div>
-                <div class="col-md-8">
-                    <p>Se você tem interesse em organizar um grupo para acompanhar o Summit, preencha o formulário abaixo que entraremos em contato!</p>
-                    <form class="form-horizontal">
-                        <div class="form-group">
-                            <label class="col-md-4 control-label" for="autor">Seu nome</label>
-                            <div class="col-md-4">
-                                <input id="autor" name="autor" type="text" placeholder="Nome" class="form-control input-md" required="">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="col-md-4 control-label" for="email">Seu e-mail</label>
-                            <div class="col-md-4">
-                                <input id="email" name="email" type="text" placeholder="E-mail" class="form-control input-md" required="">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="col-md-4 control-label" for="cidade">Cidade/UF</label>
-                            <div class="col-md-4">
-                                <input id="cidade" name="cidade" type="text" placeholder="Cidade" class="form-control input-md" required="">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="col-md-4 control-label" for="enviar"></label>
-                            <div class="col-md-4">
-                                <button id="enviar" name="enviar" class="btn btn-primary">Submeter</button>
-                            </div>
-                        </div>
-                    </form>
+                <div class="col-md-8 col-md-offset-2 text-center">
+                    <h2>Reuna os MCTs da sua região!</h2>
+                    <a href="/host" class="btn btn-outline btn-xl">Quero ser um host!</a>
                 </div>
             </div>
         </div>

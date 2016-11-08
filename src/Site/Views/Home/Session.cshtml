@@ -1,0 +1,69 @@
+﻿@model Site.Models.PostResult
+@{ 
+    var wellExtraClass = Model != null ? Model.Success ? "text-success" : "text-warning" : "";
+    var wellMessage = Model != null ? Model.Message : "<p>Obrigado pelo interesse em palestrar no Summit!<p></p><p>Por favor, preencha o formulário abaixo e entraremos em contato!</p>";
+}
+<header class="not-home"></header>
+<div class="row">
+    <div class="col-md-8 col-md-offset-2">
+        <div class="well @wellExtraClass">@Html.Raw(wellMessage)</div>
+        <form class="form-horizontal" action="/home/newsession" method="post">
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="autor">Seu nome</label>
+                <div class="col-md-4">
+                    <input id="autor" name="name" type="text" placeholder="Nome" class="form-control input-md" required="">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="email">Seu e-mail</label>
+                <div class="col-md-4">
+                    <input id="email" name="email" type="text" placeholder="E-mail" class="form-control input-md" required="">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="titulo">Título da sessão</label>
+                <div class="col-md-4">
+                    <input id="titulo" name="title" type="text" placeholder="Título" class="form-control input-md" required="">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="trilha">Trilha</label>
+                <div class="col-md-4">
+                    <select id="trilha" name="track" class="form-control">
+                        <option value="P">Infra - On Premise</option>
+                        <option value="C">Infra - Cloud</option>
+                        <option value="D">Dev</option>
+                        <option value="S">Softskills</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-md-4 control-label" for=""></label>
+                <div class="col-md-4">
+                    <div class="g-recaptcha" data-sitekey="6LfoWwsUAAAAAOMbCYy4wg6JwriOENgJgxeEB2IQ"></div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="enviar"></label>
+                <div class="col-md-4">
+                    <button id="enviar" name="enviar" class="btn btn-primary">Submeter</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+@section scripts {
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+    <script type="text/javascript">
+        $(function () {
+            $('#mainNav ul.nav').hide();
+
+            $('form').on('submit', function (e) {
+                var r = grecaptcha.getResponse();
+                var valid = r != undefined && r != null && r != '';
+
+                return valid;
+            });
+        });
+    </script>
+}

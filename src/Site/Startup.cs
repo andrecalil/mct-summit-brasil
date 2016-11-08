@@ -17,8 +17,9 @@ namespace Site
             var builder = new ConfigurationBuilder()
                 .SetBasePath(env.ContentRootPath)
                 .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
-                .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true)
+                .AddJsonFile("appsettings.dev.json", optional: true)
                 .AddEnvironmentVariables();
+
             Configuration = builder.Build();
         }
 
@@ -29,6 +30,8 @@ namespace Site
         {
             // Add framework services.
             services.AddMvc();
+            //services.AddOptions();
+            services.Configure<SendMailOptions>(Configuration.GetSection("SendMailOptions"));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -51,9 +54,9 @@ namespace Site
 
             app.UseMvc(routes =>
             {
-                routes.MapRoute(
-                    name: "default",
-                    template: "{controller=Home}/{action=Index}/{id?}");
+                routes.MapRoute(name: "host", template: "host", defaults: new { controller = "Home", action = "Host" });
+                routes.MapRoute(name: "session", template: "session", defaults: new { controller = "Home", action = "Session" });
+                routes.MapRoute(name: "default", template: "{controller=Home}/{action=Index}/{id?}");
             });
         }
     }
